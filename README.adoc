@@ -7,6 +7,10 @@
 = <Blog post title>
 <Writer Name, don't put new line between this and the title>
 
+```bash
+git clone git@github.com:kodgemisi/fork-and-go.git your-blog-post-name
+```
+
 .Please read following instructions before writing a blog post
 * Change `com.kodgemisi.blog.demo` package to `com.kodgemisi.blog.<yourpackage>`. Choose a meaningful package name.
   ** Make sure your package starts with `com.kodgemisi.blog`.
