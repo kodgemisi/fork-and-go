@@ -7,20 +7,32 @@
 = <Blog post title>
 <Writer Name, don't put new line between this and the title>
 
-```bash
-git clone git@github.com:kodgemisi/fork-and-go.git your-blog-post-name
-```
 
 .Please read following instructions before writing a blog post
-* Change `com.kodgemisi.blog.demo` package to `com.kodgemisi.blog.<yourpackage>`. Choose a meaningful package name.
+****
+
+.Use this repository as a template
+image::https://i.ibb.co/kyy4PQN/image.png[]
+
+.Create new repository in `kodgemisi-blog` Github organization
+image::https://i.ibb.co/r3BtLBc/image.png[]
+
+* Choose a descriptive and meaningful `repository name`.
+  ** The same name must be used as your `package name` and `maven artifact name`.
+* Change `com.kodgemisi.blog.demo` package to `com.kodgemisi.blog.<yourpackage>`.
   ** Make sure your package starts with `com.kodgemisi.blog`.
+* Clone the new repo in your local file system and import the repository into your IDE.
+* Edit `pom.xml` file.
+  ** Edit all `TODO`s accordingly.
+  ** Change all `change-this` fields.
 * Don't add a configuration file other than `application.yml` unless it's specifically required by your blog post subject.
   ** Use `dev` profile unless it's specifically required otherwise by your blog post subject.
 * Change everything in form of `<some text>` with your values.
 * Put all images and videos under images folder. link them as follows: `image::images/usage.gif`
 * You need to run `mvn clean compile` in order the blog post to be generated. It will be generated to `docs/index.html` file.
 * Remember that this blog post's default license is public domain.
-* Remove this list.
+* Remove this block.
+****
 
 == Introduction
 
