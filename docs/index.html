@@ -559,7 +559,7 @@ table.CodeRay td.code>pre{padding:0}
 <h1>&lt;Blog post title&gt;</h1>
 <div class="details">
 <span id="author" class="author">&lt;Writer Name, don't put new line between this and the title&gt;</span><br>
-<span id="revdate">2019-05-14</span>
+<span id="revdate">2019-06-07</span>
 <br><span id="revremark">Kod Gemisi</span>
 </div>
 <div id="toc" class="toc2">
@@ -574,15 +574,55 @@ table.CodeRay td.code>pre{padding:0}
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
-<div class="ulist">
+<div class="sidebarblock">
+<div class="content">
 <div class="title">Please read following instructions before writing a blog post</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://i.ibb.co/kyy4PQN/image.png" alt="image">
+</div>
+<div class="title">Figure 1. Use this repository as a template</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://i.ibb.co/r3BtLBc/image.png" alt="image">
+</div>
+<div class="title">Figure 2. Create new repository in <code>kodgemisi-blog</code> Github organization</div>
+</div>
+<div class="ulist">
 <ul>
 <li>
-<p>Change <code>com.kodgemisi.blog.demo</code> package to <code>com.kodgemisi.blog.&lt;yourpackage&gt;</code>. Choose a meaningful package name.</p>
+<p>Choose a descriptive and meaningful <code>repository name</code>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The same name must be used as your <code>package name</code> and <code>maven artifact name</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Change <code>com.kodgemisi.blog.demo</code> package to <code>com.kodgemisi.blog.&lt;yourpackage&gt;</code>.</p>
 <div class="ulist">
 <ul>
 <li>
 <p>Make sure your package starts with <code>com.kodgemisi.blog</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Clone the new repo in your local file system and import the repository into your IDE.</p>
+</li>
+<li>
+<p>Edit <code>pom.xml</code> file.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Edit all `TODO`s accordingly.</p>
+</li>
+<li>
+<p>Change all <code>change-this</code> fields.</p>
 </li>
 </ul>
 </div>
@@ -607,9 +647,14 @@ table.CodeRay td.code>pre{padding:0}
 <p>You need to run <code>mvn clean compile</code> in order the blog post to be generated. It will be generated to <code>docs/index.html</code> file.</p>
 </li>
 <li>
-<p>Remove this list.</p>
+<p>Remember that this blog post&#8217;s default license is public domain.</p>
+</li>
+<li>
+<p>Remove this block.</p>
 </li>
 </ul>
+</div>
+</div>
 </div>
 </div>
 </div>
