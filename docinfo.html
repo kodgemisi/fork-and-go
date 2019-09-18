@@ -1,3 +1,13 @@
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148219855-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-148219855-1');
+</script>
+
 <link rel="stylesheet" href="https://docs.spring.io/spring/docs/5.0.x/spring-framework-reference/stylesheets/asciidoctor-spring.css" />
 
 <style>
@@ -15,6 +25,16 @@
         padding-right: 0.9375em;
     }
 
+    #toc {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #scmUrlLeft{
+        margin-top: auto;
+        text-align: center;
+    }
+
     #footer {
         margin-top: 10vh;
     }
@@ -27,5 +47,9 @@
 
     #footer-text a:hover,a:focus {
         text-decoration: underline;
+    }
+
+    img {
+        border: 1px solid gainsboro;
     }
 </style>

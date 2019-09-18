@@ -522,6 +522,16 @@ table.CodeRay td.code>pre{padding:0}
 .CodeRay .change .change{color:#66f}
 .CodeRay .head .head{color:#f4f}
 </style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148219855-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-148219855-1');
+</script>
+
 <link rel="stylesheet" href="https://docs.spring.io/spring/docs/5.0.x/spring-framework-reference/stylesheets/asciidoctor-spring.css" />
 
 <style>
@@ -539,6 +549,16 @@ table.CodeRay td.code>pre{padding:0}
         padding-right: 0.9375em;
     }
 
+    #toc {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #scmUrlLeft{
+        margin-top: auto;
+        text-align: center;
+    }
+
     #footer {
         margin-top: 10vh;
     }
@@ -552,6 +572,10 @@ table.CodeRay td.code>pre{padding:0}
     #footer-text a:hover,a:focus {
         text-decoration: underline;
     }
+
+    img {
+        border: 1px solid gainsboro;
+    }
 </style>
 </head>
 <body class="article toc2 toc-left">
@@ -559,7 +583,7 @@ table.CodeRay td.code>pre{padding:0}
 <h1>&lt;Blog post title&gt;</h1>
 <div class="details">
 <span id="author" class="author">&lt;Writer Name, don't put new line between this and the title&gt;</span><br>
-<span id="revdate">2019-06-07</span>
+<span id="revdate">2019-09-18</span>
 <br><span id="revremark">Kod Gemisi</span>
 </div>
 <div id="toc" class="toc2">
@@ -641,7 +665,7 @@ table.CodeRay td.code>pre{padding:0}
 <p>Change everything in form of <code>&lt;some text&gt;</code> with your values.</p>
 </li>
 <li>
-<p>Put all images and videos under images folder. link them as follows: <code>image::images/usage.gif</code></p>
+<p>Put all images and videos under images folder. Use them as follows: <code>image::images/some.gif[]</code></p>
 </li>
 <li>
 <p>You need to run <code>mvn clean compile</code> in order the blog post to be generated. It will be generated to <code>docs/index.html</code> file.</p>
@@ -650,7 +674,37 @@ table.CodeRay td.code>pre{padding:0}
 <p>Remember that this blog post&#8217;s default license is public domain.</p>
 </li>
 <li>
-<p>Remove this block.</p>
+<p><strong>Remove this block</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">ASCIIDOCTOR related instructions</div>
+<ul>
+<li>
+<p>You can use <a href="https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/">asciidoc syntax quick reference</a> to quickly learn about ASCIIDOC syntax.</p>
+</li>
+<li>
+<p>While working in development, use <code>mvn asciidoctor:auto-refresh</code> to auto-generate <code>docs/index.html</code> file every time you make changes to <code>README.adoc</code>.</p>
+</li>
+<li>
+<p>Idea can serve generated <code>docs/index.html</code> file via its own local web server.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://i.ibb.co/m0YfMW3/image.png" alt="image">
+</div>
+<div class="title">Figure 3. Use IDEA&#8217;s internal static file server to preview the <code>docs/index.html</code> file.</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>By default table of contents shows 2 levels. You can edit it via <code>:toclevels: 4</code>. See details toc levels <a href="https://stackoverflow.com/a/31256911/878361">here</a>.</p>
+</li>
+<li>
+<p>You shouldn&#8217;t really need it but just in case, if you need to put some css put them in <code>&lt;style&gt;</code> tag in <code>docinfo.html</code></p>
 </li>
 </ul>
 </div>
@@ -709,9 +763,18 @@ table.CodeRay td.code>pre{padding:0}
         <img src="images/kodgemisi-logo.png" style="filter: brightness(0) invert(1);width: 200px;">
     </a>
     <div id="footer-text">
-        <a href="https://github.com/kodgemisi-blog/change-this">Source code of this blog post</a> <br>
+        <a id="scmUrl" href="https://github.com/kodgemisi-blog/change-this">Source code of the app in this post</a> <br>
         <a href="https://blog.kodgemisi.com/">Kod Gemisi Blog</a>
     </div>
 </div>
+
+<script>
+    {   // Put github link at the bottom of the table of content
+        const clonedEl = document.getElementById('scmUrl').cloneNode( true );
+        clonedEl.id = 'scmUrlLeft';
+        clonedEl.text = 'Github link of the app in this post';
+        document.getElementById('toc').appendChild(clonedEl);
+    }
+</script>
 </body>
 </html>
