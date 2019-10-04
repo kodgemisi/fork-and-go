@@ -130,6 +130,7 @@
                         <blogurl>${project.organization.url}</blogurl>
                         <blogpageurl>${project.url}</blogpageurl>
                         <pageidentifier>${project.artifactId}</pageidentifier>
+                        <stylesheet>docs/stylesheet.css</stylesheet>
                     </attributes>
                 </configuration>
             </plugin>
